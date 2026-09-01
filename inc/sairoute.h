@@ -55,7 +55,7 @@ typedef enum _sai_route_entry_attr_t
     SAI_ROUTE_ENTRY_ATTR_PACKET_ACTION = SAI_ROUTE_ENTRY_ATTR_START,
 
     /**
-     * @brief Generate User Defined Trap ID for trap/log actions
+     * @brief Generate User Defined Trap ID for trap/log/copy actions
      *
      * When it is SAI_NULL_OBJECT_ID, then packet will not be trapped.
      *
@@ -64,6 +64,7 @@ typedef enum _sai_route_entry_attr_t
      * @objects SAI_OBJECT_TYPE_HOSTIF_USER_DEFINED_TRAP
      * @allownull true
      * @default SAI_NULL_OBJECT_ID
+     * @validonly SAI_ROUTE_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_TRAP or SAI_ROUTE_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_COPY or SAI_ROUTE_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_LOG
      */
     SAI_ROUTE_ENTRY_ATTR_USER_TRAP_ID,
 

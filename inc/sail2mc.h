@@ -109,6 +109,20 @@ typedef enum _sai_l2mc_entry_attr_t
     SAI_L2MC_ENTRY_ATTR_OUTPUT_GROUP_ID,
 
     /**
+     * @brief Generate User Defined Trap ID for trap/log/copy actions
+     *
+     * When it is SAI_NULL_OBJECT_ID, then packet will not be trapped.
+     *
+     * @type sai_object_id_t
+     * @flags CREATE_AND_SET
+     * @objects SAI_OBJECT_TYPE_HOSTIF_USER_DEFINED_TRAP
+     * @allownull true
+     * @default SAI_NULL_OBJECT_ID
+     * @validonly SAI_L2MC_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_TRAP or SAI_L2MC_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_COPY or SAI_L2MC_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_LOG
+     */
+    SAI_L2MC_ENTRY_ATTR_USER_TRAP_ID,
+
+    /**
      * @brief End of attributes
      */
     SAI_L2MC_ENTRY_ATTR_END,

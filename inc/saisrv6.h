@@ -445,6 +445,20 @@ typedef enum _sai_my_sid_entry_attr_t
     SAI_MY_SID_ENTRY_ATTR_COUNTER_ID,
 
     /**
+     * @brief Generate User Defined Trap ID for trap/log/copy actions
+     *
+     * When it is SAI_NULL_OBJECT_ID, then packet will not be trapped.
+     *
+     * @type sai_object_id_t
+     * @flags CREATE_AND_SET
+     * @objects SAI_OBJECT_TYPE_HOSTIF_USER_DEFINED_TRAP
+     * @allownull true
+     * @default SAI_NULL_OBJECT_ID
+     * @validonly SAI_MY_SID_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_TRAP or SAI_MY_SID_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_COPY or SAI_MY_SID_ENTRY_ATTR_PACKET_ACTION == SAI_PACKET_ACTION_LOG
+     */
+    SAI_MY_SID_ENTRY_ATTR_USER_TRAP_ID,
+
+    /**
      * @brief End of attributes
      */
     SAI_MY_SID_ENTRY_ATTR_END,
